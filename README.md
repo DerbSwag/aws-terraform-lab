@@ -30,6 +30,20 @@ Infrastructure as Code (IaC) project — Deploy a production-like FastAPI applic
 │  └─────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────┘
          ↕
+
+```mermaid
+graph TD
+    Internet[🌐 Internet] --> IGW[Internet Gateway]
+    IGW --> VPC[VPC 10.0.0.0/16]
+    VPC --> Subnet[Public Subnet 10.0.1.0/24]
+    Subnet --> EC2[EC2 t3.micro - Ubuntu]
+    EC2 --> Docker[Docker]
+    Docker --> Nginx[Nginx :80]
+    Docker --> FastAPI[FastAPI :8000]
+    SG[Security Group] --> |SSH 22, HTTP 80, 8000| EC2
+```
+
+
     🌐 Internet → http://PUBLIC_IP
 ```
 

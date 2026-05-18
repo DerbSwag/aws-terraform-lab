@@ -1,4 +1,4 @@
-# ☁️ AWS Terraform Lab
+﻿# ☁️ AWS Terraform Lab
 
 Infrastructure as Code (IaC) project — Deploy a production-like FastAPI application on AWS using Terraform.
 
@@ -7,6 +7,19 @@ Infrastructure as Code (IaC) project — Deploy a production-like FastAPI applic
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
+
+## 📈 Results
+
+| Metric | Value |
+|--------|-------|
+| Deployment time | terraform apply → **full stack in <5 min** |
+| Monthly cost | **~\** (free tier eligible) / ~\ after |
+| Infrastructure | VPC + Subnet + SG + EC2 + Docker + Nginx + FastAPI |
+| Reproducibility | Destroy and recreate identical infra in minutes |
+| Security | SSH restricted to allowed CIDR, no secrets in code |
+| CI validation | terraform fmt + validate on every push |
+
+---
 ## 🏗️ Architecture
 
 ```
